@@ -10,7 +10,7 @@ export const dbserver = (() => {
   if (db.ENABLED) {
     logger.verbose('connecting');
     const dbs = mongoose.createConnection(db.CONNECTION.URI, {
-      dbName: db.CONNECTION.DB_PREFIX_NAME + '-whatsapp-api',
+      dbName: db.CONNECTION.DB_PREFIX_NAME,
     });
     logger.verbose('connected in ' + db.CONNECTION.URI);
     logger.info('ON - dbName: ' + dbs['$dbName']);
